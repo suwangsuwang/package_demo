@@ -1,5 +1,13 @@
 # Xcode
-build/
+#
+# ⚠️ 必须写成 `/build/`（前导斜杠），不能写成 `build/`。
+# macOS 的文件系统默认不区分大小写，而 git 的 `core.ignoreCase` 在 macOS 上
+# 默认是 `true`，于是 `build/` 这条规则会把 `AndroidBuildClient/Features/Build/`
+# **整个目录**一起忽略掉 —— Features/Build 下的五个源文件（BuildView /
+# BuildViewModel / BuildResultView / BuildResultViewModel / BuildLogParser）
+# 因此在第一次提交时一个都没进仓库，克隆下来是一个无法编译的工程。
+# 加前导斜杠把它锚定在仓库根目录，就只忽略根目录的构建产物了。
+/build/
 DerivedData/
 *.xcuserstate
 xcuserdata/
