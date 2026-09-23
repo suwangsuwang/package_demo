@@ -5,9 +5,13 @@ import SwiftUI
 /// **纯展示。** 数据由 `BuildView` 传进来（`BuildViewModel.history` 是唯一数据源），
 /// 本视图不取数、不刷新、不碰 `FlowService`。
 ///
-/// ⚠️ **记录行现在仍然不可点击。** 没有 `NavigationLink` / `Button` /
-/// `.onTapGesture`，也不持有任何"选中了哪一条"的状态 —— 从历史点进详情
-/// 属于后面的阶段，不在本阶段的范围里。
+/// ⚠️ **它不持有导航状态。** 记录行是可点击的（`HistoryRow` 自己带一个
+/// `NavigationLink`），但「点进去了哪一条」这件事**不在这里**：没有
+/// `selectedRun`、没有 `path`、没有 `isPresented`。导航栈由 `BuildView`
+/// 上面的 `NavigationStack` 隐式管理，本视图只负责把行的身份交给
+/// `NavigationLink(value:)`。目的地的声明也在 `BuildView`，不在这里 ——
+/// 让展示层认识 `BuildResultView` 的构造方式，等于把「结果页怎么被打开」
+/// 这个知识从 Build 层下沉下来，此后结果页入参一变就要动这个文件。
 struct HistoryView: View {
 
     /// 历史记录原文，来自 `BuildViewModel.history`。**这里不改它的内容与顺序。**
@@ -50,20 +54,37 @@ struct HistoryView: View {
 
 // MARK: - 单条记录
 
-/// 历史记录里的一行。
+/// 历史记录里的一行，**可点击**：点进去看这一次运行的结果。
 ///
 /// 展示的字段全部来自历史记录接口的原文：`pipelineRunId` / `status` /
 /// `triggerMode` / `startTime` / `endTime` / `creatorAccountId`。
 /// 只有「耗时」是本地算出来的（`endTime - startTime`），其余不做任何加工 ——
 /// 尤其是 `status`，直接显示服务端原文，而不是翻译成中文后再让用户去猜。
 ///
-/// ⚠️ 保持 `private`：它只服务于 `HistoryView`。等历史行自身长出明显复杂逻辑
-/// （比如可点击、带展开区）再考虑独立成文件。
+/// ⚠️ **导航值取的是 `BuildRunIdentity`，不是 `run` 本身。**
+/// `PipelineRun` 是快照（带 `status` / `startTime` / `endTime`），拿它当导航值
+/// 会让同一次运行在列表刷新前后变成两个不相等的值。详见 `BuildRunIdentity`。
+///
+/// ⚠️ **`.buttonStyle(.plain)` 是必需的，不是修饰。** macOS 上
+/// `NavigationLink` 默认按「链接」呈现（前景色变蓝、悬停有下划线），
+/// 会把这一行原本的中性配色整体推翻。`.plain` 让它保留原样，
+/// 同时**仍然可点击**。不要为此另写一个自定义 `ButtonStyle`。
+///
+/// ⚠️ 保持 `private`：它只服务于 `HistoryView`。
 private struct HistoryRow: View {
 
     let run: PipelineRun
 
     var body: some View {
+        NavigationLink(value: BuildRunIdentity(run: run)) {
+            rowContent
+        }
+        .buttonStyle(.plain)
+    }
+
+    /// 行的视觉内容。**与加入导航之前逐字相同** —— 字段、宽度、间距、
+    /// 字体、颜色、`padding` 一个都没动，`NavigationLink` 只包在外面。
+    private var rowContent: some View {
         HStack(alignment: .firstTextBaseline, spacing: 12) {
             Text("#\(run.pipelineRunId)")
                 .font(.callout.monospaced())

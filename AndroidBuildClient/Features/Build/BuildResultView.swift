@@ -5,20 +5,25 @@ import SwiftUI
 /// 它只认两样东西：一个 `pipelineRunId`、一个 `pipelineId`。其余全部来自
 /// `BuildResultViewModel` —— 这个 View 不拼接口、不碰 Token、不解析日志。
 ///
-/// ⚠️ **这是全项目唯一的结果展示实现。** 当前构建页已经接上来了
-/// （`BuildView` 在 `currentBuildRun` 非空时渲染这一页），从历史记录点进来
-/// 的入口还没有 —— 那属于后面的阶段。
+/// ⚠️ **这是全项目唯一的结果展示实现。** 两个入口都接在它上面：当前构建
+/// （`BuildView` 在 `currentBuildRunHasStopped` 时渲染）与历史记录
+/// （`BuildView` 的 `navigationDestination` 渲染）。它之所以是"唯一一处"
+/// 而不是"当前构建一处、历史各处一处"：这两条路径要展示的是同一件东西
+/// （某一次运行的结果），拆成两个 View 只会让它们慢慢长歪，最后同一个 Run
+/// 在两条路径下显示得不一样。
 ///
-/// 它之所以是"唯一一处"而不是"当前构建一处、历史各处一处"：这两条路径要展示的
-/// 是同一件东西（某一次运行的结果），拆成两个 View 只会让它们慢慢长歪，
-/// 最后同一个 Run 在两条路径下显示得不一样。
+/// ⚠️ **调用方必须给它一个随运行变化的视图身份。** 两条入口各自做到这点，
+/// 但**做法不同，不能互换**：
 ///
-/// ⚠️ **调用方必须给它一个随 `pipelineRunId` 变化的视图身份**
-/// （`BuildView` 用的是 `.id(run.pipelineRunId)`）。它内部那个
-/// `BuildResultViewModel` 是 `@State`，只在**视图身份变化**时才重建、
-/// `.task` 也只在身份变化时才重跑 —— 不带 `id` 的话，第二次看另一次运行
-/// 会复用同一个 ViewModel，屏幕上一直显示上一次那条运行的结果，
-/// 而且看起来完全正常。
+/// - 当前构建用 `.id(run.pipelineRunId)`。它在这个 View 里的位置是固定的，
+///   SwiftUI 的身份按"类型 + 位置"算，两次打包之间身份相同 —— 不加 `id`
+///   的话 `@State` 的 `BuildResultViewModel` 会被复用，第二次打包屏幕
+///   显示的仍是上一次那条运行的结果，而且看起来完全正常。
+/// - 历史记录**不加 `.id`**：身份由 `NavigationLink(value:)` 传进来的
+///   `BuildRunIdentity` 决定。换一条记录就是换一个导航元素，SwiftUI 自然
+///   建出新的身份。给它再套一个 `.id` 是多余的第二套身份机制。
+///
+/// 两条路径的 `BuildResultViewModel` **各自独立**，不共享实例。
 struct BuildResultView: View {
 
     /// 要看的那一次运行。
@@ -176,9 +181,34 @@ struct BuildResultView: View {
     private func statusHeadline(_ status: PipelineRunStatus) -> some View {
         switch status {
         case .running:
-            HStack(spacing: 10) {
-                ProgressView().controlSize(.small)
-                Text("构建中").font(.title3.weight(.semibold))
+            VStack(alignment: .leading, spacing: 10) {
+                HStack(spacing: 10) {
+                    ProgressView().controlSize(.small)
+                    Text("构建中").font(.title3.weight(.semibold))
+                }
+
+                // ⚠️ **这个刷新按钮是给历史入口用的，不是装饰。**
+                //
+                // 本页是**快照式**的：`.task` 在视图身份建立时打一次接口，
+                // 之后不再重问。当前构建那条路径由 `currentBuildRunHasStopped`
+                // 保证"挂载时已经终态"，所以永远走不到这个分支；但历史记录
+                // **可能是 `RUNNING`**（刚触发的那一次就在列表里，用户完全
+                // 可以在构建过程中点进来）。没有这个按钮的话，那条页面会
+                // 永久停在"构建中"，哪怕服务端早已跑完。
+                //
+                // 刻意**不做后台轮询**：为了一个极少数的 RUNNING 历史记录引入
+                // 持续请求，会让生命周期复杂很多。这是一次显式的重问。
+                //
+                // 复用 `load` 本身 —— 它已经是"重新请求并覆盖旧结果"的语义，
+                // 这里不复制任何取数逻辑。
+                Button("刷新") {
+                    Task {
+                        await viewModel.load(
+                            pipelineRunId: pipelineRunId,
+                            pipelineId: pipelineId
+                        )
+                    }
+                }
             }
         case .succeeded:
             Label("构建成功", systemImage: "checkmark.circle.fill")

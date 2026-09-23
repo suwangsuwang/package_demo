@@ -103,6 +103,23 @@ struct BuildView: View {
             // 还会把页面上正在展示的错误信息悄悄清掉。
             await viewModel.loadIfNeeded()
         }
+        // 历史记录点进来的目的地。**声明在这里，不在 `HistoryView` 里** ——
+        // 它表达的是「打开某一次运行的结果」，属于 Build 工作区内部的一次页面
+        // 跳转，与「这条记录出现在列表第几行」无关。挂在 `BuildView` 上，
+        // 它同时也是 `RootView` 那个 `NavigationStack` 的根视图。
+        //
+        // ⚠️ **不加 `.id(...)`。** 下面那个 `BuildResultView` 的身份由
+        // `NavigationLink(value:)` 传进来的 `BuildRunIdentity` 决定：换一条记录
+        // 就是换一个导航元素，SwiftUI 会为它建一个新的视图身份，`@State`
+        // 的 `BuildResultViewModel` 随身份新建、`.task` 也随之重跑。
+        // 当前构建那条路径不一样 —— 它在 `body` 里的位置固定，必须靠
+        // `.id(run.pipelineRunId)` 才能打断身份，那里的 `id` 不能删。
+        .navigationDestination(for: BuildRunIdentity.self) { identity in
+            BuildResultView(
+                pipelineRunId: identity.pipelineRunId,
+                pipelineId: identity.pipelineId
+            )
+        }
     }
 
     // MARK: - 顶部
@@ -141,15 +158,110 @@ struct BuildView: View {
     // MARK: - 操作
 
     private var controls: some View {
+        // ⚠️ 这四个控件在窄窗口下排不进一行。两个 Picker 都带 `.fixedSize()`，
+        // 不服从压缩，`HStack` 于是把宽度亏空全部转嫁给后面的 Button —— 实测窗口
+        // 560 时 `开始打包` 被压成 23×24、`刷新分支` 被压成 31×24（固有宽度分别是
+        // 76 与 97），整列的内在宽度涨到 796。macOS 的 `ScrollView` 不横向滚动，
+        // 超出视口的部分直接被裁掉，右侧控件就看不见了。
+        //
+        // 用 `ViewThatFits` 按**可用宽度**自动降级，而不是自己读窗口宽度：
+        //   宽窗口   → 一行（与改动前逐字一致）
+        //   窄窗口   → 两行（分支独占第一行）
+        //   再窄一点 → 三行（460 且正在构建时，第二行还多一个「取消」）
+        //
+        // 三份候选里的控件是**刻意重复**的：`ViewThatFits` 要求每个候选自身完整，
+        // 而把叶子控件抽出去会把「一行 / 两行 / 三行」揉进一层抽象，反而不容易
+        // 一眼看出哪一档长什么样。
+        return VStack(alignment: .leading, spacing: 8) {
+            ViewThatFits(in: .horizontal) {
+                wideControls
+                narrowControls
+                narrowestControls
+            }
+
+            branchNotice
+        }
+    }
+
+    /// 宽版：与改动前**完全一致**的一行布局 `分支 | 环境 | 开始打包 | 刷新分支`。
+    private var wideControls: some View {
+        @Bindable var viewModel = viewModel
+
+        return HStack(spacing: 12) {
+            // 两个 Picker 是**并列且独立**的，不是"环境决定分支"的联动关系。
+            // 分支决定 runningBranchs 的取值，环境决定 envs 的取值，
+            // 允许「代码分支 test + 构建环境 release」这类交叉组合。
+            branchControl
+
+            Picker("构建环境", selection: $viewModel.environment) {
+                ForEach(AppConfiguration.Environment.allCases) { environment in
+                    Text(environment.displayName).tag(environment)
+                }
+            }
+            .pickerStyle(.menu)
+            .fixedSize()
+            .disabled(viewModel.isRunning)
+            .help("触发时作为 envs.env 的取值。与代码分支相互独立。")
+            .onChange(of: viewModel.environment) {
+                viewModel.environmentDidChange()
+            }
+
+            Button("开始打包") {
+                viewModel.startBuild()
+            }
+            .keyboardShortcut(.defaultAction)
+            // 分支没确定就不允许触发：`selectedBranch` 是触发请求体里
+            // `runningBranchs` 取值的唯一来源，为空时点下去只会构建出另一个
+            // 分支的包，而界面上一路显示"构建成功"。
+            .disabled(
+                viewModel.isRunning
+                    || viewModel.branches.isEmpty
+                    || viewModel.selectedBranch == nil
+            )
+
+            if viewModel.isRunning {
+                Button("取消") {
+                    viewModel.cancel()
+                }
+            } else if viewModel.state != .idle {
+                Button("重新打包") {
+                    viewModel.startBuild()
+                }
+            }
+
+            // 刷新分支列表：重走「流水线 → 仓库列表 → 匹配 → 分支列表」。
+            // 拿不到分支时它是**唯一**的恢复入口（此时开始打包是禁用的），
+            // 所以无论成功失败都留着，只在加载中禁用。
+            Button {
+                Task { await viewModel.loadBranches() }
+            } label: {
+                Label("刷新分支", systemImage: "arrow.clockwise")
+            }
+            .disabled(viewModel.isLoadingBranches || viewModel.isRunning)
+            .help("重新从 Codeup 获取该流水线所绑定仓库的分支列表。")
+
+            Spacer()
+        }
+    }
+
+    /// 窄版：两行。
+    ///
+    /// 第一行只有分支 Picker —— 当前选中的分支名是这个 App 最该看清的值，
+    /// 宁可占一整行也不让它被截断。其余三个控件放第二行。
+    ///
+    /// 第二行里的控件与 `wideControls` 逐字相同（文案 / action / `disabled`
+    /// 条件 / `help` 都没变），只是换了个位置。
+    private var narrowControls: some View {
         @Bindable var viewModel = viewModel
 
         return VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 12) {
-                // 两个 Picker 是**并列且独立**的，不是"环境决定分支"的联动关系。
-                // 分支决定 runningBranchs 的取值，环境决定 envs 的取值，
-                // 允许「代码分支 test + 构建环境 release」这类交叉组合。
                 branchControl
 
+                Spacer()
+            }
+
+            HStack(spacing: 12) {
                 Picker("构建环境", selection: $viewModel.environment) {
                     ForEach(AppConfiguration.Environment.allCases) { environment in
                         Text(environment.displayName).tag(environment)
@@ -167,9 +279,6 @@ struct BuildView: View {
                     viewModel.startBuild()
                 }
                 .keyboardShortcut(.defaultAction)
-                // 分支没确定就不允许触发：`selectedBranch` 是触发请求体里
-                // `runningBranchs` 取值的唯一来源，为空时点下去只会构建出另一个
-                // 分支的包，而界面上一路显示"构建成功"。
                 .disabled(
                     viewModel.isRunning
                         || viewModel.branches.isEmpty
@@ -186,9 +295,6 @@ struct BuildView: View {
                     }
                 }
 
-                // 刷新分支列表：重走「流水线 → 仓库列表 → 匹配 → 分支列表」。
-                // 拿不到分支时它是**唯一**的恢复入口（此时开始打包是禁用的），
-                // 所以无论成功失败都留着，只在加载中禁用。
                 Button {
                     Task { await viewModel.loadBranches() }
                 } label: {
@@ -199,8 +305,72 @@ struct BuildView: View {
 
                 Spacer()
             }
+        }
+    }
 
-            branchNotice
+    /// 最窄版：三行。
+    ///
+    /// 460 宽时可用宽度只有 404，而「取消」出现后第二行的固有宽度是
+    /// `162.5 + 12 + 76 + 12 + 50 + 12 + 97 ≈ 421`，两行仍然放不下，
+    /// 所以把「刷新分支」再单独挪到第三行。
+    private var narrowestControls: some View {
+        @Bindable var viewModel = viewModel
+
+        return VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 12) {
+                branchControl
+
+                Spacer()
+            }
+
+            HStack(spacing: 12) {
+                Picker("构建环境", selection: $viewModel.environment) {
+                    ForEach(AppConfiguration.Environment.allCases) { environment in
+                        Text(environment.displayName).tag(environment)
+                    }
+                }
+                .pickerStyle(.menu)
+                .fixedSize()
+                .disabled(viewModel.isRunning)
+                .help("触发时作为 envs.env 的取值。与代码分支相互独立。")
+                .onChange(of: viewModel.environment) {
+                    viewModel.environmentDidChange()
+                }
+
+                Button("开始打包") {
+                    viewModel.startBuild()
+                }
+                .keyboardShortcut(.defaultAction)
+                .disabled(
+                    viewModel.isRunning
+                        || viewModel.branches.isEmpty
+                        || viewModel.selectedBranch == nil
+                )
+
+                if viewModel.isRunning {
+                    Button("取消") {
+                        viewModel.cancel()
+                    }
+                } else if viewModel.state != .idle {
+                    Button("重新打包") {
+                        viewModel.startBuild()
+                    }
+                }
+
+                Spacer()
+            }
+
+            HStack(spacing: 12) {
+                Button {
+                    Task { await viewModel.loadBranches() }
+                } label: {
+                    Label("刷新分支", systemImage: "arrow.clockwise")
+                }
+                .disabled(viewModel.isLoadingBranches || viewModel.isRunning)
+                .help("重新从 Codeup 获取该流水线所绑定仓库的分支列表。")
+
+                Spacer()
+            }
         }
     }
 

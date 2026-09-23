@@ -71,6 +71,7 @@ APP_GROUPS = [
         [
             "BuildArtifacts.swift",
             "BuildResult.swift",
+            "BuildRunIdentity.swift",
             "BuildState.swift",
             "CodeupBranch.swift",
             "CodeupRepository.swift",
@@ -94,6 +95,7 @@ TEST_FILES = [
     "BuildServiceTests.swift",
     "BuildViewModelTests.swift",
     "BuildResultViewModelTests.swift",
+    "BuildRunIdentityTests.swift",
     "BuildLogParserTests.swift",
 ]
 

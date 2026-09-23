@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AB0000000000000000000083"
+               BlueprintIdentifier = "AB0000000000000000000087"
                BuildableName = "AndroidBuildClient.app"
                BlueprintName = "AndroidBuildClient"
                ReferencedContainer = "container:AndroidBuildClient.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AB0000000000000000000085"
+               BlueprintIdentifier = "AB0000000000000000000089"
                BuildableName = "AndroidBuildClientTests.xctest"
                BlueprintName = "AndroidBuildClientTests"
                ReferencedContainer = "container:AndroidBuildClient.xcodeproj">
@@ -54,7 +54,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AB0000000000000000000083"
+               BlueprintIdentifier = "AB0000000000000000000087"
                BuildableName = "AndroidBuildClient.app"
                BlueprintName = "AndroidBuildClient"
                ReferencedContainer = "container:AndroidBuildClient.xcodeproj">
@@ -71,7 +71,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AB0000000000000000000083"
+               BlueprintIdentifier = "AB0000000000000000000087"
                BuildableName = "AndroidBuildClient.app"
                BlueprintName = "AndroidBuildClient"
                ReferencedContainer = "container:AndroidBuildClient.xcodeproj">

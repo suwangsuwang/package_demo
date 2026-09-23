@@ -162,6 +162,54 @@ struct BuildResultViewModelTests {
         #expect(viewModel.visibleArtifacts == nil)
     }
 
+    // MARK: - RUNNING 之后的重问
+
+    @Test("RUNNING 之后再 load：真的又打了一次接口，不被「已有结果」挡住")
+    func loadingAgainAfterRunningHitsTheServiceTwice() async {
+        // ⚠️ 这条用例支撑的是**历史入口的「刷新」按钮**。
+        //
+        // 结果页是快照式的：`.task` 只在视图身份建立时跑一次。历史记录里完全
+        // 可能出现 `RUNNING`（刚触发的那次就在列表里），用户点进去看到
+        // "构建中" 后，唯一的出路就是那个刷新按钮 —— 它做的正是再调一次
+        // `load`。如果 `load` 里存在"有结果就不再请求"之类的保护，
+        // 那条页面就会永久停在构建中，而这条用例会红。
+        //
+        // 断言的是**调用次数**而不是界面：按钮本身能否点出来属于 UI 验证，
+        // 但"再调一次 load 会不会真的重问服务端"必须钉死在测试里。
+        let (viewModel, stub) = Self.makeViewModel(result: Self.result(status: "RUNNING"))
+
+        await viewModel.load(pipelineRunId: Self.runID, pipelineId: Self.pipeline)
+        #expect(viewModel.runStatus == .running)
+        #expect(stub.callCount == 1)
+
+        // 这一次就是刷新按钮做的事。
+        await viewModel.load(pipelineRunId: Self.runID, pipelineId: Self.pipeline)
+
+        #expect(stub.callCount == 2, "刷新必须真的重问服务端，而不是被已有结果挡住")
+        #expect(viewModel.isLoading == false)
+        #expect(viewModel.errorMessage == nil)
+        #expect(viewModel.runStatus == .running, "重问拿到的仍是最新一次结果")
+        #expect(stub.receivedPipelineRunIds == [Self.runID, Self.runID])
+        #expect(stub.receivedPipelineIds == [Self.pipeline, Self.pipeline])
+    }
+
+    @Test("刷新期间进入加载态：不会把旧结果清成空白")
+    func reloadEntersLoadingState() async {
+        // 刷新时界面要靠 `isLoading` 表达"正在重问"。这里只能断言它**回到**
+        // false（`await` 之后已经结束），但下面这条同样重要：
+        // 刷新不该把旧结果清成 nil —— 清掉的话界面会闪一下空白。
+        let (viewModel, _) = Self.makeViewModel(result: Self.result(status: "RUNNING"))
+
+        await viewModel.load(pipelineRunId: Self.runID, pipelineId: Self.pipeline)
+        let before = viewModel.result
+
+        await viewModel.load(pipelineRunId: Self.runID, pipelineId: Self.pipeline)
+
+        #expect(viewModel.isLoading == false)
+        #expect(viewModel.result != nil)
+        #expect(viewModel.result == before)
+    }
+
     // MARK: - 第二道闸
 
     @Test("认不出的状态 + 人工注入的非空产物：产物仍然不可见")
