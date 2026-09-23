@@ -38,6 +38,8 @@ APP_GROUPS = [
             "BuildLogParser.swift",
             "BuildResultView.swift",
             "BuildResultViewModel.swift",
+            "HistoryView.swift",
+            "HistoryViewModel.swift",
         ],
     ),
     (

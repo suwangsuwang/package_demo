@@ -7,206 +7,214 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB000000000000000000003F /* AndroidBuildClientApp.swift */ = {
+		AB0000000000000000000041 /* AndroidBuildClientApp.swift */ = {
 			fileRef = AB0000000000000000000002;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000040 /* AppModel.swift */ = {
+		AB0000000000000000000042 /* AppModel.swift */ = {
 			fileRef = AB0000000000000000000003;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000041 /* RootView.swift */ = {
+		AB0000000000000000000043 /* RootView.swift */ = {
 			fileRef = AB0000000000000000000004;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000042 /* AuthService.swift */ = {
+		AB0000000000000000000044 /* AuthService.swift */ = {
 			fileRef = AB0000000000000000000007;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000043 /* KeychainService.swift */ = {
+		AB0000000000000000000045 /* KeychainService.swift */ = {
 			fileRef = AB0000000000000000000008;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000044 /* TokenStore.swift */ = {
+		AB0000000000000000000046 /* TokenStore.swift */ = {
 			fileRef = AB0000000000000000000009;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000045 /* CodeupService.swift */ = {
+		AB0000000000000000000047 /* CodeupService.swift */ = {
 			fileRef = AB000000000000000000000B;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000046 /* CodeupServiceError.swift */ = {
+		AB0000000000000000000048 /* CodeupServiceError.swift */ = {
 			fileRef = AB000000000000000000000C;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000047 /* RepositoryMatcher.swift */ = {
+		AB0000000000000000000049 /* RepositoryMatcher.swift */ = {
 			fileRef = AB000000000000000000000D;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000048 /* AppConfiguration.swift */ = {
+		AB000000000000000000004A /* AppConfiguration.swift */ = {
 			fileRef = AB000000000000000000000F;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000049 /* BuildConfig.swift */ = {
+		AB000000000000000000004B /* BuildConfig.swift */ = {
 			fileRef = AB0000000000000000000010;
 			isa = PBXBuildFile;
 		};
-		AB000000000000000000004A /* BuildService.swift */ = {
+		AB000000000000000000004C /* BuildService.swift */ = {
 			fileRef = AB0000000000000000000012;
 			isa = PBXBuildFile;
 		};
-		AB000000000000000000004B /* FlowService.swift */ = {
+		AB000000000000000000004D /* FlowService.swift */ = {
 			fileRef = AB0000000000000000000013;
 			isa = PBXBuildFile;
 		};
-		AB000000000000000000004C /* FlowServiceError.swift */ = {
+		AB000000000000000000004E /* FlowServiceError.swift */ = {
 			fileRef = AB0000000000000000000014;
 			isa = PBXBuildFile;
 		};
-		AB000000000000000000004D /* PipelineRunStatus.swift */ = {
+		AB000000000000000000004F /* PipelineRunStatus.swift */ = {
 			fileRef = AB0000000000000000000015;
 			isa = PBXBuildFile;
 		};
-		AB000000000000000000004E /* StepLog.swift */ = {
+		AB0000000000000000000050 /* StepLog.swift */ = {
 			fileRef = AB0000000000000000000016;
 			isa = PBXBuildFile;
 		};
-		AB000000000000000000004F /* APIClient.swift */ = {
+		AB0000000000000000000051 /* APIClient.swift */ = {
 			fileRef = AB0000000000000000000018;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000050 /* APIError.swift */ = {
+		AB0000000000000000000052 /* APIError.swift */ = {
 			fileRef = AB0000000000000000000019;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000051 /* YunxiaoEndpoint.swift */ = {
+		AB0000000000000000000053 /* YunxiaoEndpoint.swift */ = {
 			fileRef = AB000000000000000000001A;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000052 /* URLLauncher.swift */ = {
+		AB0000000000000000000054 /* URLLauncher.swift */ = {
 			fileRef = AB000000000000000000001C;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000053 /* BuildLogParser.swift */ = {
+		AB0000000000000000000055 /* BuildLogParser.swift */ = {
 			fileRef = AB000000000000000000001F;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000054 /* BuildResultView.swift */ = {
+		AB0000000000000000000056 /* BuildResultView.swift */ = {
 			fileRef = AB0000000000000000000020;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000055 /* BuildResultViewModel.swift */ = {
+		AB0000000000000000000057 /* BuildResultViewModel.swift */ = {
 			fileRef = AB0000000000000000000021;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000056 /* BuildView.swift */ = {
+		AB0000000000000000000058 /* BuildView.swift */ = {
 			fileRef = AB0000000000000000000022;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000057 /* BuildViewModel.swift */ = {
+		AB0000000000000000000059 /* BuildViewModel.swift */ = {
 			fileRef = AB0000000000000000000023;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000058 /* TokenSetupView.swift */ = {
+		AB000000000000000000005A /* HistoryView.swift */ = {
+			fileRef = AB0000000000000000000024;
+			isa = PBXBuildFile;
+		};
+		AB000000000000000000005B /* HistoryViewModel.swift */ = {
 			fileRef = AB0000000000000000000025;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000059 /* TokenSetupViewModel.swift */ = {
-			fileRef = AB0000000000000000000026;
+		AB000000000000000000005C /* TokenSetupView.swift */ = {
+			fileRef = AB0000000000000000000027;
 			isa = PBXBuildFile;
 		};
-		AB000000000000000000005A /* BuildArtifacts.swift */ = {
+		AB000000000000000000005D /* TokenSetupViewModel.swift */ = {
 			fileRef = AB0000000000000000000028;
 			isa = PBXBuildFile;
 		};
-		AB000000000000000000005B /* BuildResult.swift */ = {
-			fileRef = AB0000000000000000000029;
-			isa = PBXBuildFile;
-		};
-		AB000000000000000000005C /* BuildState.swift */ = {
+		AB000000000000000000005E /* BuildArtifacts.swift */ = {
 			fileRef = AB000000000000000000002A;
 			isa = PBXBuildFile;
 		};
-		AB000000000000000000005D /* CodeupBranch.swift */ = {
+		AB000000000000000000005F /* BuildResult.swift */ = {
 			fileRef = AB000000000000000000002B;
 			isa = PBXBuildFile;
 		};
-		AB000000000000000000005E /* CodeupRepository.swift */ = {
+		AB0000000000000000000060 /* BuildState.swift */ = {
 			fileRef = AB000000000000000000002C;
 			isa = PBXBuildFile;
 		};
-		AB000000000000000000005F /* PipelineInfo.swift */ = {
+		AB0000000000000000000061 /* CodeupBranch.swift */ = {
 			fileRef = AB000000000000000000002D;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000060 /* PipelineRun.swift */ = {
+		AB0000000000000000000062 /* CodeupRepository.swift */ = {
 			fileRef = AB000000000000000000002E;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000061 /* PipelineRunDetail.swift */ = {
+		AB0000000000000000000063 /* PipelineInfo.swift */ = {
 			fileRef = AB000000000000000000002F;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000062 /* PipelineStep.swift */ = {
+		AB0000000000000000000064 /* PipelineRun.swift */ = {
 			fileRef = AB0000000000000000000030;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000063 /* YunxiaoUser.swift */ = {
+		AB0000000000000000000065 /* PipelineRunDetail.swift */ = {
 			fileRef = AB0000000000000000000031;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000064 /* TestSupport.swift */ = {
+		AB0000000000000000000066 /* PipelineStep.swift */ = {
 			fileRef = AB0000000000000000000032;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000065 /* KeychainServiceTests.swift */ = {
+		AB0000000000000000000067 /* YunxiaoUser.swift */ = {
 			fileRef = AB0000000000000000000033;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000066 /* APIClientTests.swift */ = {
+		AB0000000000000000000068 /* TestSupport.swift */ = {
 			fileRef = AB0000000000000000000034;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000067 /* AppConfigurationTests.swift */ = {
+		AB0000000000000000000069 /* KeychainServiceTests.swift */ = {
 			fileRef = AB0000000000000000000035;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000068 /* CodeupServiceTests.swift */ = {
+		AB000000000000000000006A /* APIClientTests.swift */ = {
 			fileRef = AB0000000000000000000036;
 			isa = PBXBuildFile;
 		};
-		AB0000000000000000000069 /* RepositoryMatcherTests.swift */ = {
+		AB000000000000000000006B /* AppConfigurationTests.swift */ = {
 			fileRef = AB0000000000000000000037;
 			isa = PBXBuildFile;
 		};
-		AB000000000000000000006A /* FlowServiceTests.swift */ = {
+		AB000000000000000000006C /* CodeupServiceTests.swift */ = {
 			fileRef = AB0000000000000000000038;
 			isa = PBXBuildFile;
 		};
-		AB000000000000000000006B /* BuildServiceTests.swift */ = {
+		AB000000000000000000006D /* RepositoryMatcherTests.swift */ = {
 			fileRef = AB0000000000000000000039;
 			isa = PBXBuildFile;
 		};
-		AB000000000000000000006C /* BuildViewModelTests.swift */ = {
+		AB000000000000000000006E /* FlowServiceTests.swift */ = {
 			fileRef = AB000000000000000000003A;
 			isa = PBXBuildFile;
 		};
-		AB000000000000000000006D /* BuildResultViewModelTests.swift */ = {
+		AB000000000000000000006F /* BuildServiceTests.swift */ = {
 			fileRef = AB000000000000000000003B;
 			isa = PBXBuildFile;
 		};
-		AB000000000000000000006E /* BuildLogParserTests.swift */ = {
+		AB0000000000000000000070 /* BuildViewModelTests.swift */ = {
 			fileRef = AB000000000000000000003C;
+			isa = PBXBuildFile;
+		};
+		AB0000000000000000000071 /* BuildResultViewModelTests.swift */ = {
+			fileRef = AB000000000000000000003D;
+			isa = PBXBuildFile;
+		};
+		AB0000000000000000000072 /* BuildLogParserTests.swift */ = {
+			fileRef = AB000000000000000000003E;
 			isa = PBXBuildFile;
 		};
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AB000000000000000000007E = {
-			containerPortal = AB0000000000000000000086;
+		AB0000000000000000000082 = {
+			containerPortal = AB000000000000000000008A;
 			isa = PBXContainerItemProxy;
 			proxyType = 1;
-			remoteGlobalIDString = AB000000000000000000007F;
+			remoteGlobalIDString = AB0000000000000000000083;
 			remoteInfo = AndroidBuildClient;
 		};
 /* End PBXContainerItemProxy section */
@@ -362,152 +370,164 @@
 			path = BuildViewModel.swift;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000025 /* TokenSetupView.swift */ = {
+		AB0000000000000000000024 /* HistoryView.swift */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = HistoryView.swift;
+			sourceTree = "<group>";
+		};
+		AB0000000000000000000025 /* HistoryViewModel.swift */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = HistoryViewModel.swift;
+			sourceTree = "<group>";
+		};
+		AB0000000000000000000027 /* TokenSetupView.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = TokenSetupView.swift;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000026 /* TokenSetupViewModel.swift */ = {
+		AB0000000000000000000028 /* TokenSetupViewModel.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = TokenSetupViewModel.swift;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000028 /* BuildArtifacts.swift */ = {
+		AB000000000000000000002A /* BuildArtifacts.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = BuildArtifacts.swift;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000029 /* BuildResult.swift */ = {
+		AB000000000000000000002B /* BuildResult.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = BuildResult.swift;
 			sourceTree = "<group>";
 		};
-		AB000000000000000000002A /* BuildState.swift */ = {
+		AB000000000000000000002C /* BuildState.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = BuildState.swift;
 			sourceTree = "<group>";
 		};
-		AB000000000000000000002B /* CodeupBranch.swift */ = {
+		AB000000000000000000002D /* CodeupBranch.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = CodeupBranch.swift;
 			sourceTree = "<group>";
 		};
-		AB000000000000000000002C /* CodeupRepository.swift */ = {
+		AB000000000000000000002E /* CodeupRepository.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = CodeupRepository.swift;
 			sourceTree = "<group>";
 		};
-		AB000000000000000000002D /* PipelineInfo.swift */ = {
+		AB000000000000000000002F /* PipelineInfo.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = PipelineInfo.swift;
 			sourceTree = "<group>";
 		};
-		AB000000000000000000002E /* PipelineRun.swift */ = {
+		AB0000000000000000000030 /* PipelineRun.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = PipelineRun.swift;
 			sourceTree = "<group>";
 		};
-		AB000000000000000000002F /* PipelineRunDetail.swift */ = {
+		AB0000000000000000000031 /* PipelineRunDetail.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = PipelineRunDetail.swift;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000030 /* PipelineStep.swift */ = {
+		AB0000000000000000000032 /* PipelineStep.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = PipelineStep.swift;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000031 /* YunxiaoUser.swift */ = {
+		AB0000000000000000000033 /* YunxiaoUser.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = YunxiaoUser.swift;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000032 /* TestSupport.swift */ = {
+		AB0000000000000000000034 /* TestSupport.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = TestSupport.swift;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000033 /* KeychainServiceTests.swift */ = {
+		AB0000000000000000000035 /* KeychainServiceTests.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = KeychainServiceTests.swift;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000034 /* APIClientTests.swift */ = {
+		AB0000000000000000000036 /* APIClientTests.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = APIClientTests.swift;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000035 /* AppConfigurationTests.swift */ = {
+		AB0000000000000000000037 /* AppConfigurationTests.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = AppConfigurationTests.swift;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000036 /* CodeupServiceTests.swift */ = {
+		AB0000000000000000000038 /* CodeupServiceTests.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = CodeupServiceTests.swift;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000037 /* RepositoryMatcherTests.swift */ = {
+		AB0000000000000000000039 /* RepositoryMatcherTests.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = RepositoryMatcherTests.swift;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000038 /* FlowServiceTests.swift */ = {
+		AB000000000000000000003A /* FlowServiceTests.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = FlowServiceTests.swift;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000039 /* BuildServiceTests.swift */ = {
+		AB000000000000000000003B /* BuildServiceTests.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = BuildServiceTests.swift;
 			sourceTree = "<group>";
 		};
-		AB000000000000000000003A /* BuildViewModelTests.swift */ = {
+		AB000000000000000000003C /* BuildViewModelTests.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = BuildViewModelTests.swift;
 			sourceTree = "<group>";
 		};
-		AB000000000000000000003B /* BuildResultViewModelTests.swift */ = {
+		AB000000000000000000003D /* BuildResultViewModelTests.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = BuildResultViewModelTests.swift;
 			sourceTree = "<group>";
 		};
-		AB000000000000000000003C /* BuildLogParserTests.swift */ = {
+		AB000000000000000000003E /* BuildLogParserTests.swift */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.swift;
 			path = BuildLogParserTests.swift;
 			sourceTree = "<group>";
 		};
-		AB000000000000000000003D /* AndroidBuildClient.app */ = {
+		AB000000000000000000003F /* AndroidBuildClient.app */ = {
 			explicitFileType = wrapper.application;
 			includeInIndex = 0;
 			isa = PBXFileReference;
 			path = AndroidBuildClient.app;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		AB000000000000000000003E /* AndroidBuildClientTests.xctest */ = {
+		AB0000000000000000000040 /* AndroidBuildClientTests.xctest */ = {
 			explicitFileType = wrapper.cfbundle;
 			includeInIndex = 0;
 			isa = PBXFileReference;
@@ -517,14 +537,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AB0000000000000000000070 = {
+		AB0000000000000000000074 = {
 			buildActionMask = 2147483647;
 			files = (
 			);
 			isa = PBXFrameworksBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB0000000000000000000073 = {
+		AB0000000000000000000077 = {
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -619,7 +639,7 @@
 		AB000000000000000000001D = {
 			children = (
 				AB000000000000000000001E,
-				AB0000000000000000000024,
+				AB0000000000000000000026,
 			);
 			isa = PBXGroup;
 			path = Features;
@@ -632,24 +652,24 @@
 				AB0000000000000000000021,
 				AB0000000000000000000022,
 				AB0000000000000000000023,
+				AB0000000000000000000024,
+				AB0000000000000000000025,
 			);
 			isa = PBXGroup;
 			path = Build;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000024 = {
+		AB0000000000000000000026 = {
 			children = (
-				AB0000000000000000000025,
-				AB0000000000000000000026,
+				AB0000000000000000000027,
+				AB0000000000000000000028,
 			);
 			isa = PBXGroup;
 			path = Token;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000027 = {
+		AB0000000000000000000029 = {
 			children = (
-				AB0000000000000000000028,
-				AB0000000000000000000029,
 				AB000000000000000000002A,
 				AB000000000000000000002B,
 				AB000000000000000000002C,
@@ -658,35 +678,35 @@
 				AB000000000000000000002F,
 				AB0000000000000000000030,
 				AB0000000000000000000031,
+				AB0000000000000000000032,
+				AB0000000000000000000033,
 			);
 			isa = PBXGroup;
 			path = Models;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000082 = {
+		AB0000000000000000000086 = {
 			children = (
-				AB000000000000000000003D,
-				AB000000000000000000003E,
+				AB000000000000000000003F,
+				AB0000000000000000000040,
 			);
 			isa = PBXGroup;
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000083 = {
+		AB0000000000000000000087 = {
 			children = (
 				AB0000000000000000000001,
 				AB0000000000000000000005,
 				AB000000000000000000001D,
-				AB0000000000000000000027,
+				AB0000000000000000000029,
 			);
 			isa = PBXGroup;
 			path = AndroidBuildClient;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000084 = {
+		AB0000000000000000000088 = {
 			children = (
-				AB0000000000000000000032,
-				AB0000000000000000000033,
 				AB0000000000000000000034,
 				AB0000000000000000000035,
 				AB0000000000000000000036,
@@ -696,16 +716,18 @@
 				AB000000000000000000003A,
 				AB000000000000000000003B,
 				AB000000000000000000003C,
+				AB000000000000000000003D,
+				AB000000000000000000003E,
 			);
 			isa = PBXGroup;
 			path = AndroidBuildClientTests;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000085 = {
+		AB0000000000000000000089 = {
 			children = (
-				AB0000000000000000000083,
-				AB0000000000000000000084,
-				AB0000000000000000000082,
+				AB0000000000000000000087,
+				AB0000000000000000000088,
+				AB0000000000000000000086,
 			);
 			isa = PBXGroup;
 			sourceTree = "<group>";
@@ -713,12 +735,12 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AB000000000000000000007F /* AndroidBuildClient */ = {
-			buildConfigurationList = AB000000000000000000007A;
+		AB0000000000000000000083 /* AndroidBuildClient */ = {
+			buildConfigurationList = AB000000000000000000007E;
 			buildPhases = (
-				AB000000000000000000006F,
-				AB0000000000000000000070,
-				AB0000000000000000000071,
+				AB0000000000000000000073,
+				AB0000000000000000000074,
+				AB0000000000000000000075,
 			);
 			buildRules = (
 			);
@@ -727,46 +749,46 @@
 			isa = PBXNativeTarget;
 			name = AndroidBuildClient;
 			productName = AndroidBuildClient;
-			productReference = AB000000000000000000003D;
+			productReference = AB000000000000000000003F;
 			productType = "com.apple.product-type.application";
 		};
-		AB0000000000000000000081 /* AndroidBuildClientTests */ = {
-			buildConfigurationList = AB000000000000000000007D;
+		AB0000000000000000000085 /* AndroidBuildClientTests */ = {
+			buildConfigurationList = AB0000000000000000000081;
 			buildPhases = (
-				AB0000000000000000000072,
-				AB0000000000000000000073,
-				AB0000000000000000000074,
+				AB0000000000000000000076,
+				AB0000000000000000000077,
+				AB0000000000000000000078,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AB0000000000000000000080,
+				AB0000000000000000000084,
 			);
 			isa = PBXNativeTarget;
 			name = AndroidBuildClientTests;
 			productName = AndroidBuildClientTests;
-			productReference = AB000000000000000000003E;
+			productReference = AB0000000000000000000040;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AB0000000000000000000086 = {
+		AB000000000000000000008A = {
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2700;
 				LastUpgradeCheck = 2700;
 				TargetAttributes = {
-					AB000000000000000000007F = {
+					AB0000000000000000000083 = {
 						CreatedOnToolsVersion = 27.0;
 					};
-					AB0000000000000000000081 = {
+					AB0000000000000000000085 = {
 						CreatedOnToolsVersion = 27.0;
-						TestTargetID = AB000000000000000000007F;
+						TestTargetID = AB0000000000000000000083;
 					};
 				};
 			};
-			buildConfigurationList = AB0000000000000000000077;
+			buildConfigurationList = AB000000000000000000007B;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -775,28 +797,28 @@
 				en,
 				Base,
 			);
-			mainGroup = AB0000000000000000000085;
+			mainGroup = AB0000000000000000000089;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = AB0000000000000000000082;
+			productRefGroup = AB0000000000000000000086;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AB000000000000000000007F,
-				AB0000000000000000000081,
+				AB0000000000000000000083,
+				AB0000000000000000000085,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AB0000000000000000000071 = {
+		AB0000000000000000000075 = {
 			buildActionMask = 2147483647;
 			files = (
 			);
 			isa = PBXResourcesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB0000000000000000000074 = {
+		AB0000000000000000000078 = {
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -806,11 +828,9 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AB000000000000000000006F = {
+		AB0000000000000000000073 = {
 			buildActionMask = 2147483647;
 			files = (
-				AB000000000000000000003F,
-				AB0000000000000000000040,
 				AB0000000000000000000041,
 				AB0000000000000000000042,
 				AB0000000000000000000043,
@@ -846,17 +866,17 @@
 				AB0000000000000000000061,
 				AB0000000000000000000062,
 				AB0000000000000000000063,
-			);
-			isa = PBXSourcesBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AB0000000000000000000072 = {
-			buildActionMask = 2147483647;
-			files = (
 				AB0000000000000000000064,
 				AB0000000000000000000065,
 				AB0000000000000000000066,
 				AB0000000000000000000067,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB0000000000000000000076 = {
+			buildActionMask = 2147483647;
+			files = (
 				AB0000000000000000000068,
 				AB0000000000000000000069,
 				AB000000000000000000006A,
@@ -864,6 +884,10 @@
 				AB000000000000000000006C,
 				AB000000000000000000006D,
 				AB000000000000000000006E,
+				AB000000000000000000006F,
+				AB0000000000000000000070,
+				AB0000000000000000000071,
+				AB0000000000000000000072,
 			);
 			isa = PBXSourcesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -871,15 +895,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AB0000000000000000000080 = {
+		AB0000000000000000000084 = {
 			isa = PBXTargetDependency;
-			target = AB000000000000000000007F;
-			targetProxy = AB000000000000000000007E;
+			target = AB0000000000000000000083;
+			targetProxy = AB0000000000000000000082;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		AB0000000000000000000075 /* Debug */ = {
+		AB0000000000000000000079 /* Debug */ = {
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -932,7 +956,7 @@
 			isa = XCBuildConfiguration;
 			name = Debug;
 		};
-		AB0000000000000000000076 /* Release */ = {
+		AB000000000000000000007A /* Release */ = {
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -977,7 +1001,7 @@
 			isa = XCBuildConfiguration;
 			name = Release;
 		};
-		AB0000000000000000000078 /* Debug */ = {
+		AB000000000000000000007C /* Debug */ = {
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -1000,7 +1024,7 @@
 			isa = XCBuildConfiguration;
 			name = Debug;
 		};
-		AB0000000000000000000079 /* Release */ = {
+		AB000000000000000000007D /* Release */ = {
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -1023,7 +1047,7 @@
 			isa = XCBuildConfiguration;
 			name = Release;
 		};
-		AB000000000000000000007B /* Debug */ = {
+		AB000000000000000000007F /* Debug */ = {
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "-";
@@ -1039,7 +1063,7 @@
 			isa = XCBuildConfiguration;
 			name = Debug;
 		};
-		AB000000000000000000007C /* Release */ = {
+		AB0000000000000000000080 /* Release */ = {
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "-";
@@ -1058,28 +1082,28 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AB0000000000000000000077 /* Build configuration list */ = {
+		AB000000000000000000007B /* Build configuration list */ = {
 			buildConfigurations = (
-				AB0000000000000000000075,
-				AB0000000000000000000076,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-			isa = XCConfigurationList;
-		};
-		AB000000000000000000007A /* Build configuration list */ = {
-			buildConfigurations = (
-				AB0000000000000000000078,
 				AB0000000000000000000079,
+				AB000000000000000000007A,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 			isa = XCConfigurationList;
 		};
-		AB000000000000000000007D /* Build configuration list */ = {
+		AB000000000000000000007E /* Build configuration list */ = {
 			buildConfigurations = (
-				AB000000000000000000007B,
 				AB000000000000000000007C,
+				AB000000000000000000007D,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+			isa = XCConfigurationList;
+		};
+		AB0000000000000000000081 /* Build configuration list */ = {
+			buildConfigurations = (
+				AB000000000000000000007F,
+				AB0000000000000000000080,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1087,5 +1111,5 @@
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AB0000000000000000000086 /* Project object */;
+	rootObject = AB000000000000000000008A /* Project object */;
 }

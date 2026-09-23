@@ -84,7 +84,13 @@ struct BuildView: View {
                         .fixedSize(horizontal: false, vertical: true)
                 }
 
-                historySection
+                // 历史区块整个搬到了 `HistoryView`。这里只负责把数据递过去 ——
+                // 加载仍然由 `BuildViewModel` 负责（`load()` / `refreshHistory()`），
+                // 本页继续是历史数据的唯一拥有者，`HistoryView` 只是展示。
+                HistoryView(
+                    runs: viewModel.history,
+                    isLoading: viewModel.isLoadingHistory
+                )
 
                 Spacer(minLength: 0)
             }
@@ -276,103 +282,8 @@ struct BuildView: View {
         }
     }
 
-    // MARK: - 历史打包记录
-
-    /// 历史记录列表。
-    ///
-    /// 展示的字段全部来自历史记录接口的原文：`pipelineRunId` / `status` /
-    /// `triggerMode` / `startTime` / `endTime` / `creatorAccountId`。
-    /// 只有「耗时」是本地算出来的（`endTime - startTime`），其余不做任何加工 ——
-    /// 尤其是 `status`，直接显示服务端原文，而不是翻译成中文后再让用户去猜。
-    private var historySection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Divider()
-
-            HStack(spacing: 8) {
-                Text("最近打包记录").font(.headline)
-                if viewModel.isLoadingHistory {
-                    ProgressView().controlSize(.small)
-                }
-                Spacer()
-            }
-
-            if viewModel.history.isEmpty {
-                Text(viewModel.isLoadingHistory ? "正在加载…" : "暂无记录")
-                    .font(.callout)
-                    .foregroundStyle(.secondary)
-            } else {
-                // 只展示最近 10 条，不做分页。
-                VStack(alignment: .leading, spacing: 6) {
-                    ForEach(viewModel.history.prefix(10)) { run in
-                        historyRow(run)
-                    }
-                }
-            }
-        }
-    }
-
-    private func historyRow(_ run: PipelineRun) -> some View {
-        HStack(alignment: .firstTextBaseline, spacing: 12) {
-            Text("#\(run.pipelineRunId)")
-                .font(.callout.monospaced())
-                .frame(width: 60, alignment: .leading)
-
-            // 服务端状态原文，不是归类后的中文。
-            Text(run.status)
-                .font(.callout.monospaced())
-                .foregroundStyle(color(for: run.runStatus))
-                .frame(width: 90, alignment: .leading)
-
-            Text(run.trigger.displayName)
-                .font(.callout)
-                .foregroundStyle(.secondary)
-                .frame(width: 80, alignment: .leading)
-
-            Text(Self.dateText(run.startTime))
-                .font(.callout)
-                .foregroundStyle(.secondary)
-
-            Text(run.creatorID ?? "—")
-                .font(.footnote.monospaced())
-                .foregroundStyle(.tertiary)
-                .lineLimit(1)
-                .truncationMode(.middle)
-                .help(run.creatorID ?? "该记录没有触发者账号 ID")
-
-            Spacer(minLength: 12)
-
-            if let startTime = run.startTime, let endTime = run.endTime {
-                Text(Self.durationText(from: startTime, to: endTime))
-                    .font(.callout)
-                    .foregroundStyle(.secondary)
-            } else if run.runStatus == .running {
-                Text("进行中")
-                    .font(.callout)
-                    .foregroundStyle(.secondary)
-            }
-        }
-        .padding(.vertical, 2)
-    }
-
     // MARK: - 辅助
-
-    private func color(for status: PipelineRunStatus) -> Color {
-        switch status {
-        case .succeeded: .green
-        case .failed: .red
-        case .canceled, .running, .unknown: .secondary
-        }
-    }
-
-    /// 毫秒时间戳 → 本地时间文本。时间戳缺失时（运行详情接口不返回起始时间）显示占位符。
-    private static func dateText(_ milliseconds: Int64?) -> String {
-        guard let milliseconds else { return "—" }
-        let date = Date(timeIntervalSince1970: Double(milliseconds) / 1000)
-        return date.formatted(date: .numeric, time: .shortened)
-    }
-
-    private static func durationText(from start: Int64, to end: Int64) -> String {
-        let seconds = max(0, end - start) / 1000
-        return "\(seconds / 60) 分 \(seconds % 60) 秒"
-    }
+    //
+    // 原来这里的 `dateText` / `durationText` / `color(for:)` 三个私有辅助
+    // **只服务于历史行**，已随历史区块一起搬进 `HistoryView.swift`。
 }
