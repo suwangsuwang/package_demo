@@ -1,0 +1,8 @@
+{
+  "yunxiaoDomain": "https://openapi-rdc.aliyuncs.com",
+  "organizationId": "在这里填你的 organizationId",
+  "pipelines": {
+    "test": "在这里填 Test 环境的 pipelineId",
+    "release": "在这里填 Release 环境的 pipelineId"
+  }
+}
