@@ -13,7 +13,8 @@ TEST_DIR = "AndroidBuildClientTests"
 APP_TARGET = "AndroidBuildClient"
 TEST_TARGET = "AndroidBuildClientTests"
 BUNDLE_ID = "com.wangsu.AndroidBuildClient"
-DEPLOYMENT_TARGET = "27.0"
+# 最低支持 macOS 26。用户量很小、以功能为先，不为更老的系统做兼容。
+DEPLOYMENT_TARGET = "26.0"
 
 _counter = 0
 

@@ -3,224 +3,68 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB0000000000000000000043 /* AndroidBuildClientApp.swift */ = {
-			fileRef = AB0000000000000000000002;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000044 /* AppModel.swift */ = {
-			fileRef = AB0000000000000000000003;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000045 /* RootView.swift */ = {
-			fileRef = AB0000000000000000000004;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000046 /* AuthService.swift */ = {
-			fileRef = AB0000000000000000000007;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000047 /* KeychainService.swift */ = {
-			fileRef = AB0000000000000000000008;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000048 /* TokenStore.swift */ = {
-			fileRef = AB0000000000000000000009;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000049 /* CodeupService.swift */ = {
-			fileRef = AB000000000000000000000B;
-			isa = PBXBuildFile;
-		};
-		AB000000000000000000004A /* CodeupServiceError.swift */ = {
-			fileRef = AB000000000000000000000C;
-			isa = PBXBuildFile;
-		};
-		AB000000000000000000004B /* RepositoryMatcher.swift */ = {
-			fileRef = AB000000000000000000000D;
-			isa = PBXBuildFile;
-		};
-		AB000000000000000000004C /* AppConfiguration.swift */ = {
-			fileRef = AB000000000000000000000F;
-			isa = PBXBuildFile;
-		};
-		AB000000000000000000004D /* BuildConfig.swift */ = {
-			fileRef = AB0000000000000000000010;
-			isa = PBXBuildFile;
-		};
-		AB000000000000000000004E /* BuildService.swift */ = {
-			fileRef = AB0000000000000000000012;
-			isa = PBXBuildFile;
-		};
-		AB000000000000000000004F /* FlowService.swift */ = {
-			fileRef = AB0000000000000000000013;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000050 /* FlowServiceError.swift */ = {
-			fileRef = AB0000000000000000000014;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000051 /* PipelineRunStatus.swift */ = {
-			fileRef = AB0000000000000000000015;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000052 /* StepLog.swift */ = {
-			fileRef = AB0000000000000000000016;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000053 /* APIClient.swift */ = {
-			fileRef = AB0000000000000000000018;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000054 /* APIError.swift */ = {
-			fileRef = AB0000000000000000000019;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000055 /* YunxiaoEndpoint.swift */ = {
-			fileRef = AB000000000000000000001A;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000056 /* URLLauncher.swift */ = {
-			fileRef = AB000000000000000000001C;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000057 /* BuildLogParser.swift */ = {
-			fileRef = AB000000000000000000001F;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000058 /* BuildResultView.swift */ = {
-			fileRef = AB0000000000000000000020;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000059 /* BuildResultViewModel.swift */ = {
-			fileRef = AB0000000000000000000021;
-			isa = PBXBuildFile;
-		};
-		AB000000000000000000005A /* BuildView.swift */ = {
-			fileRef = AB0000000000000000000022;
-			isa = PBXBuildFile;
-		};
-		AB000000000000000000005B /* BuildViewModel.swift */ = {
-			fileRef = AB0000000000000000000023;
-			isa = PBXBuildFile;
-		};
-		AB000000000000000000005C /* HistoryView.swift */ = {
-			fileRef = AB0000000000000000000024;
-			isa = PBXBuildFile;
-		};
-		AB000000000000000000005D /* HistoryViewModel.swift */ = {
-			fileRef = AB0000000000000000000025;
-			isa = PBXBuildFile;
-		};
-		AB000000000000000000005E /* TokenSetupView.swift */ = {
-			fileRef = AB0000000000000000000027;
-			isa = PBXBuildFile;
-		};
-		AB000000000000000000005F /* TokenSetupViewModel.swift */ = {
-			fileRef = AB0000000000000000000028;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000060 /* BuildArtifacts.swift */ = {
-			fileRef = AB000000000000000000002A;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000061 /* BuildResult.swift */ = {
-			fileRef = AB000000000000000000002B;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000062 /* BuildRunIdentity.swift */ = {
-			fileRef = AB000000000000000000002C;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000063 /* BuildState.swift */ = {
-			fileRef = AB000000000000000000002D;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000064 /* CodeupBranch.swift */ = {
-			fileRef = AB000000000000000000002E;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000065 /* CodeupRepository.swift */ = {
-			fileRef = AB000000000000000000002F;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000066 /* PipelineInfo.swift */ = {
-			fileRef = AB0000000000000000000030;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000067 /* PipelineRun.swift */ = {
-			fileRef = AB0000000000000000000031;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000068 /* PipelineRunDetail.swift */ = {
-			fileRef = AB0000000000000000000032;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000069 /* PipelineStep.swift */ = {
-			fileRef = AB0000000000000000000033;
-			isa = PBXBuildFile;
-		};
-		AB000000000000000000006A /* YunxiaoUser.swift */ = {
-			fileRef = AB0000000000000000000034;
-			isa = PBXBuildFile;
-		};
-		AB000000000000000000006B /* TestSupport.swift */ = {
-			fileRef = AB0000000000000000000035;
-			isa = PBXBuildFile;
-		};
-		AB000000000000000000006C /* KeychainServiceTests.swift */ = {
-			fileRef = AB0000000000000000000036;
-			isa = PBXBuildFile;
-		};
-		AB000000000000000000006D /* APIClientTests.swift */ = {
-			fileRef = AB0000000000000000000037;
-			isa = PBXBuildFile;
-		};
-		AB000000000000000000006E /* AppConfigurationTests.swift */ = {
-			fileRef = AB0000000000000000000038;
-			isa = PBXBuildFile;
-		};
-		AB000000000000000000006F /* CodeupServiceTests.swift */ = {
-			fileRef = AB0000000000000000000039;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000070 /* RepositoryMatcherTests.swift */ = {
-			fileRef = AB000000000000000000003A;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000071 /* FlowServiceTests.swift */ = {
-			fileRef = AB000000000000000000003B;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000072 /* BuildServiceTests.swift */ = {
-			fileRef = AB000000000000000000003C;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000073 /* BuildViewModelTests.swift */ = {
-			fileRef = AB000000000000000000003D;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000074 /* BuildResultViewModelTests.swift */ = {
-			fileRef = AB000000000000000000003E;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000075 /* BuildRunIdentityTests.swift */ = {
-			fileRef = AB000000000000000000003F;
-			isa = PBXBuildFile;
-		};
-		AB0000000000000000000076 /* BuildLogParserTests.swift */ = {
-			fileRef = AB0000000000000000000040;
-			isa = PBXBuildFile;
-		};
+		AB0000000000000000000043 /* AndroidBuildClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000002 /* AndroidBuildClientApp.swift */; };
+		AB0000000000000000000044 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000003 /* AppModel.swift */; };
+		AB0000000000000000000045 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000004 /* RootView.swift */; };
+		AB0000000000000000000046 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000007 /* AuthService.swift */; };
+		AB0000000000000000000047 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000008 /* KeychainService.swift */; };
+		AB0000000000000000000048 /* TokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000009 /* TokenStore.swift */; };
+		AB0000000000000000000049 /* CodeupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000000B /* CodeupService.swift */; };
+		AB000000000000000000004A /* CodeupServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000000C /* CodeupServiceError.swift */; };
+		AB000000000000000000004B /* RepositoryMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000000D /* RepositoryMatcher.swift */; };
+		AB000000000000000000004C /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000000F /* AppConfiguration.swift */; };
+		AB000000000000000000004D /* BuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000010 /* BuildConfig.swift */; };
+		AB000000000000000000004E /* BuildService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000012 /* BuildService.swift */; };
+		AB000000000000000000004F /* FlowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000013 /* FlowService.swift */; };
+		AB0000000000000000000050 /* FlowServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000014 /* FlowServiceError.swift */; };
+		AB0000000000000000000051 /* PipelineRunStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000015 /* PipelineRunStatus.swift */; };
+		AB0000000000000000000052 /* StepLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000016 /* StepLog.swift */; };
+		AB0000000000000000000053 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000018 /* APIClient.swift */; };
+		AB0000000000000000000054 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000019 /* APIError.swift */; };
+		AB0000000000000000000055 /* YunxiaoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000001A /* YunxiaoEndpoint.swift */; };
+		AB0000000000000000000056 /* URLLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000001C /* URLLauncher.swift */; };
+		AB0000000000000000000057 /* BuildLogParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000001F /* BuildLogParser.swift */; };
+		AB0000000000000000000058 /* BuildResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000020 /* BuildResultView.swift */; };
+		AB0000000000000000000059 /* BuildResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000021 /* BuildResultViewModel.swift */; };
+		AB000000000000000000005A /* BuildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000022 /* BuildView.swift */; };
+		AB000000000000000000005B /* BuildViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000023 /* BuildViewModel.swift */; };
+		AB000000000000000000005C /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000024 /* HistoryView.swift */; };
+		AB000000000000000000005D /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000025 /* HistoryViewModel.swift */; };
+		AB000000000000000000005E /* TokenSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000027 /* TokenSetupView.swift */; };
+		AB000000000000000000005F /* TokenSetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000028 /* TokenSetupViewModel.swift */; };
+		AB0000000000000000000060 /* BuildArtifacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000002A /* BuildArtifacts.swift */; };
+		AB0000000000000000000061 /* BuildResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000002B /* BuildResult.swift */; };
+		AB0000000000000000000062 /* BuildRunIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000002C /* BuildRunIdentity.swift */; };
+		AB0000000000000000000063 /* BuildState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000002D /* BuildState.swift */; };
+		AB0000000000000000000064 /* CodeupBranch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000002E /* CodeupBranch.swift */; };
+		AB0000000000000000000065 /* CodeupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000002F /* CodeupRepository.swift */; };
+		AB0000000000000000000066 /* PipelineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000030 /* PipelineInfo.swift */; };
+		AB0000000000000000000067 /* PipelineRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000031 /* PipelineRun.swift */; };
+		AB0000000000000000000068 /* PipelineRunDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000032 /* PipelineRunDetail.swift */; };
+		AB0000000000000000000069 /* PipelineStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000033 /* PipelineStep.swift */; };
+		AB000000000000000000006A /* YunxiaoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000034 /* YunxiaoUser.swift */; };
+		AB000000000000000000006B /* TestSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000035 /* TestSupport.swift */; };
+		AB000000000000000000006C /* KeychainServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000036 /* KeychainServiceTests.swift */; };
+		AB000000000000000000006D /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000037 /* APIClientTests.swift */; };
+		AB000000000000000000006E /* AppConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000038 /* AppConfigurationTests.swift */; };
+		AB000000000000000000006F /* CodeupServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000039 /* CodeupServiceTests.swift */; };
+		AB0000000000000000000070 /* RepositoryMatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000003A /* RepositoryMatcherTests.swift */; };
+		AB0000000000000000000071 /* FlowServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000003B /* FlowServiceTests.swift */; };
+		AB0000000000000000000072 /* BuildServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000003C /* BuildServiceTests.swift */; };
+		AB0000000000000000000073 /* BuildViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000003D /* BuildViewModelTests.swift */; };
+		AB0000000000000000000074 /* BuildResultViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000003E /* BuildResultViewModelTests.swift */; };
+		AB0000000000000000000075 /* BuildRunIdentityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000003F /* BuildRunIdentityTests.swift */; };
+		AB0000000000000000000076 /* BuildLogParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000040 /* BuildLogParserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AB0000000000000000000086 = {
-			containerPortal = AB000000000000000000008E;
+		AB0000000000000000000086 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
+			containerPortal = AB000000000000000000008E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = AB0000000000000000000087;
 			remoteInfo = AndroidBuildClient;
@@ -228,574 +72,303 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AB0000000000000000000002 /* AndroidBuildClientApp.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = AndroidBuildClientApp.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000003 /* AppModel.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = AppModel.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000004 /* RootView.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = RootView.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000007 /* AuthService.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = AuthService.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000008 /* KeychainService.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = KeychainService.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000009 /* TokenStore.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = TokenStore.swift;
-			sourceTree = "<group>";
-		};
-		AB000000000000000000000B /* CodeupService.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = CodeupService.swift;
-			sourceTree = "<group>";
-		};
-		AB000000000000000000000C /* CodeupServiceError.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = CodeupServiceError.swift;
-			sourceTree = "<group>";
-		};
-		AB000000000000000000000D /* RepositoryMatcher.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = RepositoryMatcher.swift;
-			sourceTree = "<group>";
-		};
-		AB000000000000000000000F /* AppConfiguration.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = AppConfiguration.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000010 /* BuildConfig.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = BuildConfig.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000012 /* BuildService.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = BuildService.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000013 /* FlowService.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = FlowService.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000014 /* FlowServiceError.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = FlowServiceError.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000015 /* PipelineRunStatus.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = PipelineRunStatus.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000016 /* StepLog.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = StepLog.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000018 /* APIClient.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = APIClient.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000019 /* APIError.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = APIError.swift;
-			sourceTree = "<group>";
-		};
-		AB000000000000000000001A /* YunxiaoEndpoint.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = YunxiaoEndpoint.swift;
-			sourceTree = "<group>";
-		};
-		AB000000000000000000001C /* URLLauncher.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = URLLauncher.swift;
-			sourceTree = "<group>";
-		};
-		AB000000000000000000001F /* BuildLogParser.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = BuildLogParser.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000020 /* BuildResultView.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = BuildResultView.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000021 /* BuildResultViewModel.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = BuildResultViewModel.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000022 /* BuildView.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = BuildView.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000023 /* BuildViewModel.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = BuildViewModel.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000024 /* HistoryView.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = HistoryView.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000025 /* HistoryViewModel.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = HistoryViewModel.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000027 /* TokenSetupView.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = TokenSetupView.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000028 /* TokenSetupViewModel.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = TokenSetupViewModel.swift;
-			sourceTree = "<group>";
-		};
-		AB000000000000000000002A /* BuildArtifacts.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = BuildArtifacts.swift;
-			sourceTree = "<group>";
-		};
-		AB000000000000000000002B /* BuildResult.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = BuildResult.swift;
-			sourceTree = "<group>";
-		};
-		AB000000000000000000002C /* BuildRunIdentity.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = BuildRunIdentity.swift;
-			sourceTree = "<group>";
-		};
-		AB000000000000000000002D /* BuildState.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = BuildState.swift;
-			sourceTree = "<group>";
-		};
-		AB000000000000000000002E /* CodeupBranch.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = CodeupBranch.swift;
-			sourceTree = "<group>";
-		};
-		AB000000000000000000002F /* CodeupRepository.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = CodeupRepository.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000030 /* PipelineInfo.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = PipelineInfo.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000031 /* PipelineRun.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = PipelineRun.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000032 /* PipelineRunDetail.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = PipelineRunDetail.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000033 /* PipelineStep.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = PipelineStep.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000034 /* YunxiaoUser.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = YunxiaoUser.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000035 /* TestSupport.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = TestSupport.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000036 /* KeychainServiceTests.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = KeychainServiceTests.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000037 /* APIClientTests.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = APIClientTests.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000038 /* AppConfigurationTests.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = AppConfigurationTests.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000039 /* CodeupServiceTests.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = CodeupServiceTests.swift;
-			sourceTree = "<group>";
-		};
-		AB000000000000000000003A /* RepositoryMatcherTests.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = RepositoryMatcherTests.swift;
-			sourceTree = "<group>";
-		};
-		AB000000000000000000003B /* FlowServiceTests.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = FlowServiceTests.swift;
-			sourceTree = "<group>";
-		};
-		AB000000000000000000003C /* BuildServiceTests.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = BuildServiceTests.swift;
-			sourceTree = "<group>";
-		};
-		AB000000000000000000003D /* BuildViewModelTests.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = BuildViewModelTests.swift;
-			sourceTree = "<group>";
-		};
-		AB000000000000000000003E /* BuildResultViewModelTests.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = BuildResultViewModelTests.swift;
-			sourceTree = "<group>";
-		};
-		AB000000000000000000003F /* BuildRunIdentityTests.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = BuildRunIdentityTests.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000040 /* BuildLogParserTests.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = BuildLogParserTests.swift;
-			sourceTree = "<group>";
-		};
-		AB0000000000000000000041 /* AndroidBuildClient.app */ = {
-			explicitFileType = wrapper.application;
-			includeInIndex = 0;
-			isa = PBXFileReference;
-			path = AndroidBuildClient.app;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		AB0000000000000000000042 /* AndroidBuildClientTests.xctest */ = {
-			explicitFileType = wrapper.cfbundle;
-			includeInIndex = 0;
-			isa = PBXFileReference;
-			path = AndroidBuildClientTests.xctest;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
+		AB0000000000000000000002 /* AndroidBuildClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndroidBuildClientApp.swift; sourceTree = "<group>"; };
+		AB0000000000000000000003 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		AB0000000000000000000004 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000007 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		AB0000000000000000000008 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		AB0000000000000000000009 /* TokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStore.swift; sourceTree = "<group>"; };
+		AB000000000000000000000B /* CodeupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeupService.swift; sourceTree = "<group>"; };
+		AB000000000000000000000C /* CodeupServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeupServiceError.swift; sourceTree = "<group>"; };
+		AB000000000000000000000D /* RepositoryMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryMatcher.swift; sourceTree = "<group>"; };
+		AB000000000000000000000F /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		AB0000000000000000000010 /* BuildConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfig.swift; sourceTree = "<group>"; };
+		AB0000000000000000000012 /* BuildService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildService.swift; sourceTree = "<group>"; };
+		AB0000000000000000000013 /* FlowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowService.swift; sourceTree = "<group>"; };
+		AB0000000000000000000014 /* FlowServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowServiceError.swift; sourceTree = "<group>"; };
+		AB0000000000000000000015 /* PipelineRunStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineRunStatus.swift; sourceTree = "<group>"; };
+		AB0000000000000000000016 /* StepLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepLog.swift; sourceTree = "<group>"; };
+		AB0000000000000000000018 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		AB0000000000000000000019 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		AB000000000000000000001A /* YunxiaoEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YunxiaoEndpoint.swift; sourceTree = "<group>"; };
+		AB000000000000000000001C /* URLLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLLauncher.swift; sourceTree = "<group>"; };
+		AB000000000000000000001F /* BuildLogParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildLogParser.swift; sourceTree = "<group>"; };
+		AB0000000000000000000020 /* BuildResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildResultView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000021 /* BuildResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildResultViewModel.swift; sourceTree = "<group>"; };
+		AB0000000000000000000022 /* BuildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000023 /* BuildViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildViewModel.swift; sourceTree = "<group>"; };
+		AB0000000000000000000024 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000025 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		AB0000000000000000000027 /* TokenSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenSetupView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000028 /* TokenSetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenSetupViewModel.swift; sourceTree = "<group>"; };
+		AB000000000000000000002A /* BuildArtifacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildArtifacts.swift; sourceTree = "<group>"; };
+		AB000000000000000000002B /* BuildResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildResult.swift; sourceTree = "<group>"; };
+		AB000000000000000000002C /* BuildRunIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildRunIdentity.swift; sourceTree = "<group>"; };
+		AB000000000000000000002D /* BuildState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildState.swift; sourceTree = "<group>"; };
+		AB000000000000000000002E /* CodeupBranch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeupBranch.swift; sourceTree = "<group>"; };
+		AB000000000000000000002F /* CodeupRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeupRepository.swift; sourceTree = "<group>"; };
+		AB0000000000000000000030 /* PipelineInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineInfo.swift; sourceTree = "<group>"; };
+		AB0000000000000000000031 /* PipelineRun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineRun.swift; sourceTree = "<group>"; };
+		AB0000000000000000000032 /* PipelineRunDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineRunDetail.swift; sourceTree = "<group>"; };
+		AB0000000000000000000033 /* PipelineStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineStep.swift; sourceTree = "<group>"; };
+		AB0000000000000000000034 /* YunxiaoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YunxiaoUser.swift; sourceTree = "<group>"; };
+		AB0000000000000000000035 /* TestSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSupport.swift; sourceTree = "<group>"; };
+		AB0000000000000000000036 /* KeychainServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServiceTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000037 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000038 /* AppConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurationTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000039 /* CodeupServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeupServiceTests.swift; sourceTree = "<group>"; };
+		AB000000000000000000003A /* RepositoryMatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryMatcherTests.swift; sourceTree = "<group>"; };
+		AB000000000000000000003B /* FlowServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowServiceTests.swift; sourceTree = "<group>"; };
+		AB000000000000000000003C /* BuildServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildServiceTests.swift; sourceTree = "<group>"; };
+		AB000000000000000000003D /* BuildViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildViewModelTests.swift; sourceTree = "<group>"; };
+		AB000000000000000000003E /* BuildResultViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildResultViewModelTests.swift; sourceTree = "<group>"; };
+		AB000000000000000000003F /* BuildRunIdentityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildRunIdentityTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000040 /* BuildLogParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildLogParserTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000041 /* AndroidBuildClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AndroidBuildClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB0000000000000000000042 /* AndroidBuildClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AndroidBuildClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AB0000000000000000000078 = {
+		AB0000000000000000000078 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			isa = PBXFrameworksBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB000000000000000000007B = {
+		AB000000000000000000007B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			isa = PBXFrameworksBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AB0000000000000000000001 = {
-			children = (
-				AB0000000000000000000002,
-				AB0000000000000000000003,
-				AB0000000000000000000004,
-			);
+		AB0000000000000000000001 /* App */ = {
 			isa = PBXGroup;
+			children = (
+				AB0000000000000000000002 /* AndroidBuildClientApp.swift */,
+				AB0000000000000000000003 /* AppModel.swift */,
+				AB0000000000000000000004 /* RootView.swift */,
+			);
 			path = App;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000005 = {
-			children = (
-				AB0000000000000000000006,
-				AB000000000000000000000A,
-				AB000000000000000000000E,
-				AB0000000000000000000011,
-				AB0000000000000000000017,
-				AB000000000000000000001B,
-			);
+		AB0000000000000000000005 /* Core */ = {
 			isa = PBXGroup;
+			children = (
+				AB0000000000000000000006 /* Authentication */,
+				AB000000000000000000000A /* Codeup */,
+				AB000000000000000000000E /* Configuration */,
+				AB0000000000000000000011 /* Flow */,
+				AB0000000000000000000017 /* Network */,
+				AB000000000000000000001B /* Platform */,
+			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000006 = {
-			children = (
-				AB0000000000000000000007,
-				AB0000000000000000000008,
-				AB0000000000000000000009,
-			);
+		AB0000000000000000000006 /* Authentication */ = {
 			isa = PBXGroup;
+			children = (
+				AB0000000000000000000007 /* AuthService.swift */,
+				AB0000000000000000000008 /* KeychainService.swift */,
+				AB0000000000000000000009 /* TokenStore.swift */,
+			);
 			path = Authentication;
 			sourceTree = "<group>";
 		};
-		AB000000000000000000000A = {
-			children = (
-				AB000000000000000000000B,
-				AB000000000000000000000C,
-				AB000000000000000000000D,
-			);
+		AB000000000000000000000A /* Codeup */ = {
 			isa = PBXGroup;
+			children = (
+				AB000000000000000000000B /* CodeupService.swift */,
+				AB000000000000000000000C /* CodeupServiceError.swift */,
+				AB000000000000000000000D /* RepositoryMatcher.swift */,
+			);
 			path = Codeup;
 			sourceTree = "<group>";
 		};
-		AB000000000000000000000E = {
-			children = (
-				AB000000000000000000000F,
-				AB0000000000000000000010,
-			);
+		AB000000000000000000000E /* Configuration */ = {
 			isa = PBXGroup;
+			children = (
+				AB000000000000000000000F /* AppConfiguration.swift */,
+				AB0000000000000000000010 /* BuildConfig.swift */,
+			);
 			path = Configuration;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000011 = {
-			children = (
-				AB0000000000000000000012,
-				AB0000000000000000000013,
-				AB0000000000000000000014,
-				AB0000000000000000000015,
-				AB0000000000000000000016,
-			);
+		AB0000000000000000000011 /* Flow */ = {
 			isa = PBXGroup;
+			children = (
+				AB0000000000000000000012 /* BuildService.swift */,
+				AB0000000000000000000013 /* FlowService.swift */,
+				AB0000000000000000000014 /* FlowServiceError.swift */,
+				AB0000000000000000000015 /* PipelineRunStatus.swift */,
+				AB0000000000000000000016 /* StepLog.swift */,
+			);
 			path = Flow;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000017 = {
-			children = (
-				AB0000000000000000000018,
-				AB0000000000000000000019,
-				AB000000000000000000001A,
-			);
+		AB0000000000000000000017 /* Network */ = {
 			isa = PBXGroup;
+			children = (
+				AB0000000000000000000018 /* APIClient.swift */,
+				AB0000000000000000000019 /* APIError.swift */,
+				AB000000000000000000001A /* YunxiaoEndpoint.swift */,
+			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		AB000000000000000000001B = {
-			children = (
-				AB000000000000000000001C,
-			);
+		AB000000000000000000001B /* Platform */ = {
 			isa = PBXGroup;
+			children = (
+				AB000000000000000000001C /* URLLauncher.swift */,
+			);
 			path = Platform;
 			sourceTree = "<group>";
 		};
-		AB000000000000000000001D = {
-			children = (
-				AB000000000000000000001E,
-				AB0000000000000000000026,
-			);
+		AB000000000000000000001D /* Features */ = {
 			isa = PBXGroup;
+			children = (
+				AB000000000000000000001E /* Build */,
+				AB0000000000000000000026 /* Token */,
+			);
 			path = Features;
 			sourceTree = "<group>";
 		};
-		AB000000000000000000001E = {
-			children = (
-				AB000000000000000000001F,
-				AB0000000000000000000020,
-				AB0000000000000000000021,
-				AB0000000000000000000022,
-				AB0000000000000000000023,
-				AB0000000000000000000024,
-				AB0000000000000000000025,
-			);
+		AB000000000000000000001E /* Build */ = {
 			isa = PBXGroup;
+			children = (
+				AB000000000000000000001F /* BuildLogParser.swift */,
+				AB0000000000000000000020 /* BuildResultView.swift */,
+				AB0000000000000000000021 /* BuildResultViewModel.swift */,
+				AB0000000000000000000022 /* BuildView.swift */,
+				AB0000000000000000000023 /* BuildViewModel.swift */,
+				AB0000000000000000000024 /* HistoryView.swift */,
+				AB0000000000000000000025 /* HistoryViewModel.swift */,
+			);
 			path = Build;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000026 = {
-			children = (
-				AB0000000000000000000027,
-				AB0000000000000000000028,
-			);
+		AB0000000000000000000026 /* Token */ = {
 			isa = PBXGroup;
+			children = (
+				AB0000000000000000000027 /* TokenSetupView.swift */,
+				AB0000000000000000000028 /* TokenSetupViewModel.swift */,
+			);
 			path = Token;
 			sourceTree = "<group>";
 		};
-		AB0000000000000000000029 = {
-			children = (
-				AB000000000000000000002A,
-				AB000000000000000000002B,
-				AB000000000000000000002C,
-				AB000000000000000000002D,
-				AB000000000000000000002E,
-				AB000000000000000000002F,
-				AB0000000000000000000030,
-				AB0000000000000000000031,
-				AB0000000000000000000032,
-				AB0000000000000000000033,
-				AB0000000000000000000034,
-			);
+		AB0000000000000000000029 /* Models */ = {
 			isa = PBXGroup;
+			children = (
+				AB000000000000000000002A /* BuildArtifacts.swift */,
+				AB000000000000000000002B /* BuildResult.swift */,
+				AB000000000000000000002C /* BuildRunIdentity.swift */,
+				AB000000000000000000002D /* BuildState.swift */,
+				AB000000000000000000002E /* CodeupBranch.swift */,
+				AB000000000000000000002F /* CodeupRepository.swift */,
+				AB0000000000000000000030 /* PipelineInfo.swift */,
+				AB0000000000000000000031 /* PipelineRun.swift */,
+				AB0000000000000000000032 /* PipelineRunDetail.swift */,
+				AB0000000000000000000033 /* PipelineStep.swift */,
+				AB0000000000000000000034 /* YunxiaoUser.swift */,
+			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		AB000000000000000000008A = {
-			children = (
-				AB0000000000000000000041,
-				AB0000000000000000000042,
-			);
+		AB000000000000000000008A /* Products */ = {
 			isa = PBXGroup;
+			children = (
+				AB0000000000000000000041 /* AndroidBuildClient.app */,
+				AB0000000000000000000042 /* AndroidBuildClientTests.xctest */,
+			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AB000000000000000000008B = {
-			children = (
-				AB0000000000000000000001,
-				AB0000000000000000000005,
-				AB000000000000000000001D,
-				AB0000000000000000000029,
-			);
+		AB000000000000000000008B /* AndroidBuildClient */ = {
 			isa = PBXGroup;
+			children = (
+				AB0000000000000000000001 /* App */,
+				AB0000000000000000000005 /* Core */,
+				AB000000000000000000001D /* Features */,
+				AB0000000000000000000029 /* Models */,
+			);
 			path = AndroidBuildClient;
 			sourceTree = "<group>";
 		};
-		AB000000000000000000008C = {
-			children = (
-				AB0000000000000000000035,
-				AB0000000000000000000036,
-				AB0000000000000000000037,
-				AB0000000000000000000038,
-				AB0000000000000000000039,
-				AB000000000000000000003A,
-				AB000000000000000000003B,
-				AB000000000000000000003C,
-				AB000000000000000000003D,
-				AB000000000000000000003E,
-				AB000000000000000000003F,
-				AB0000000000000000000040,
-			);
+		AB000000000000000000008C /* AndroidBuildClientTests */ = {
 			isa = PBXGroup;
+			children = (
+				AB0000000000000000000035 /* TestSupport.swift */,
+				AB0000000000000000000036 /* KeychainServiceTests.swift */,
+				AB0000000000000000000037 /* APIClientTests.swift */,
+				AB0000000000000000000038 /* AppConfigurationTests.swift */,
+				AB0000000000000000000039 /* CodeupServiceTests.swift */,
+				AB000000000000000000003A /* RepositoryMatcherTests.swift */,
+				AB000000000000000000003B /* FlowServiceTests.swift */,
+				AB000000000000000000003C /* BuildServiceTests.swift */,
+				AB000000000000000000003D /* BuildViewModelTests.swift */,
+				AB000000000000000000003E /* BuildResultViewModelTests.swift */,
+				AB000000000000000000003F /* BuildRunIdentityTests.swift */,
+				AB0000000000000000000040 /* BuildLogParserTests.swift */,
+			);
 			path = AndroidBuildClientTests;
 			sourceTree = "<group>";
 		};
 		AB000000000000000000008D = {
-			children = (
-				AB000000000000000000008B,
-				AB000000000000000000008C,
-				AB000000000000000000008A,
-			);
 			isa = PBXGroup;
+			children = (
+				AB000000000000000000008B /* AndroidBuildClient */,
+				AB000000000000000000008C /* AndroidBuildClientTests */,
+				AB000000000000000000008A /* Products */,
+			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
 		AB0000000000000000000087 /* AndroidBuildClient */ = {
-			buildConfigurationList = AB0000000000000000000082;
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB0000000000000000000082 /* Build configuration list for PBXNativeTarget "AndroidBuildClient" */;
 			buildPhases = (
-				AB0000000000000000000077,
-				AB0000000000000000000078,
-				AB0000000000000000000079,
+				AB0000000000000000000077 /* Sources */,
+				AB0000000000000000000078 /* Frameworks */,
+				AB0000000000000000000079 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			isa = PBXNativeTarget;
 			name = AndroidBuildClient;
 			productName = AndroidBuildClient;
-			productReference = AB0000000000000000000041;
+			productReference = AB0000000000000000000041 /* AndroidBuildClient.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AB0000000000000000000089 /* AndroidBuildClientTests */ = {
-			buildConfigurationList = AB0000000000000000000085;
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB0000000000000000000085 /* Build configuration list for PBXNativeTarget "AndroidBuildClientTests" */;
 			buildPhases = (
-				AB000000000000000000007A,
-				AB000000000000000000007B,
-				AB000000000000000000007C,
+				AB000000000000000000007A /* Sources */,
+				AB000000000000000000007B /* Frameworks */,
+				AB000000000000000000007C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AB0000000000000000000088,
+				AB0000000000000000000088 /* PBXTargetDependency */,
 			);
-			isa = PBXNativeTarget;
 			name = AndroidBuildClientTests;
 			productName = AndroidBuildClientTests;
-			productReference = AB0000000000000000000042;
+			productReference = AB0000000000000000000042 /* AndroidBuildClientTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AB000000000000000000008E = {
+		AB000000000000000000008E /* Project object */ = {
+			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2700;
@@ -810,124 +383,123 @@
 					};
 				};
 			};
-			buildConfigurationList = AB000000000000000000007F;
+			buildConfigurationList = AB000000000000000000007F /* Build configuration list for PBXProject "AndroidBuildClient" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
-			isa = PBXProject;
 			knownRegions = (
 				en,
 				Base,
 			);
 			mainGroup = AB000000000000000000008D;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
-			productRefGroup = AB000000000000000000008A;
+			productRefGroup = AB000000000000000000008A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AB0000000000000000000087,
-				AB0000000000000000000089,
+				AB0000000000000000000087 /* AndroidBuildClient */,
+				AB0000000000000000000089 /* AndroidBuildClientTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AB0000000000000000000079 = {
+		AB0000000000000000000079 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			isa = PBXResourcesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB000000000000000000007C = {
+		AB000000000000000000007C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			isa = PBXResourcesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AB0000000000000000000077 = {
+		AB0000000000000000000077 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB0000000000000000000043,
-				AB0000000000000000000044,
-				AB0000000000000000000045,
-				AB0000000000000000000046,
-				AB0000000000000000000047,
-				AB0000000000000000000048,
-				AB0000000000000000000049,
-				AB000000000000000000004A,
-				AB000000000000000000004B,
-				AB000000000000000000004C,
-				AB000000000000000000004D,
-				AB000000000000000000004E,
-				AB000000000000000000004F,
-				AB0000000000000000000050,
-				AB0000000000000000000051,
-				AB0000000000000000000052,
-				AB0000000000000000000053,
-				AB0000000000000000000054,
-				AB0000000000000000000055,
-				AB0000000000000000000056,
-				AB0000000000000000000057,
-				AB0000000000000000000058,
-				AB0000000000000000000059,
-				AB000000000000000000005A,
-				AB000000000000000000005B,
-				AB000000000000000000005C,
-				AB000000000000000000005D,
-				AB000000000000000000005E,
-				AB000000000000000000005F,
-				AB0000000000000000000060,
-				AB0000000000000000000061,
-				AB0000000000000000000062,
-				AB0000000000000000000063,
-				AB0000000000000000000064,
-				AB0000000000000000000065,
-				AB0000000000000000000066,
-				AB0000000000000000000067,
-				AB0000000000000000000068,
-				AB0000000000000000000069,
-				AB000000000000000000006A,
+				AB0000000000000000000043 /* AndroidBuildClientApp.swift in Sources */,
+				AB0000000000000000000044 /* AppModel.swift in Sources */,
+				AB0000000000000000000045 /* RootView.swift in Sources */,
+				AB0000000000000000000046 /* AuthService.swift in Sources */,
+				AB0000000000000000000047 /* KeychainService.swift in Sources */,
+				AB0000000000000000000048 /* TokenStore.swift in Sources */,
+				AB0000000000000000000049 /* CodeupService.swift in Sources */,
+				AB000000000000000000004A /* CodeupServiceError.swift in Sources */,
+				AB000000000000000000004B /* RepositoryMatcher.swift in Sources */,
+				AB000000000000000000004C /* AppConfiguration.swift in Sources */,
+				AB000000000000000000004D /* BuildConfig.swift in Sources */,
+				AB000000000000000000004E /* BuildService.swift in Sources */,
+				AB000000000000000000004F /* FlowService.swift in Sources */,
+				AB0000000000000000000050 /* FlowServiceError.swift in Sources */,
+				AB0000000000000000000051 /* PipelineRunStatus.swift in Sources */,
+				AB0000000000000000000052 /* StepLog.swift in Sources */,
+				AB0000000000000000000053 /* APIClient.swift in Sources */,
+				AB0000000000000000000054 /* APIError.swift in Sources */,
+				AB0000000000000000000055 /* YunxiaoEndpoint.swift in Sources */,
+				AB0000000000000000000056 /* URLLauncher.swift in Sources */,
+				AB0000000000000000000057 /* BuildLogParser.swift in Sources */,
+				AB0000000000000000000058 /* BuildResultView.swift in Sources */,
+				AB0000000000000000000059 /* BuildResultViewModel.swift in Sources */,
+				AB000000000000000000005A /* BuildView.swift in Sources */,
+				AB000000000000000000005B /* BuildViewModel.swift in Sources */,
+				AB000000000000000000005C /* HistoryView.swift in Sources */,
+				AB000000000000000000005D /* HistoryViewModel.swift in Sources */,
+				AB000000000000000000005E /* TokenSetupView.swift in Sources */,
+				AB000000000000000000005F /* TokenSetupViewModel.swift in Sources */,
+				AB0000000000000000000060 /* BuildArtifacts.swift in Sources */,
+				AB0000000000000000000061 /* BuildResult.swift in Sources */,
+				AB0000000000000000000062 /* BuildRunIdentity.swift in Sources */,
+				AB0000000000000000000063 /* BuildState.swift in Sources */,
+				AB0000000000000000000064 /* CodeupBranch.swift in Sources */,
+				AB0000000000000000000065 /* CodeupRepository.swift in Sources */,
+				AB0000000000000000000066 /* PipelineInfo.swift in Sources */,
+				AB0000000000000000000067 /* PipelineRun.swift in Sources */,
+				AB0000000000000000000068 /* PipelineRunDetail.swift in Sources */,
+				AB0000000000000000000069 /* PipelineStep.swift in Sources */,
+				AB000000000000000000006A /* YunxiaoUser.swift in Sources */,
 			);
-			isa = PBXSourcesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB000000000000000000007A = {
+		AB000000000000000000007A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB000000000000000000006B,
-				AB000000000000000000006C,
-				AB000000000000000000006D,
-				AB000000000000000000006E,
-				AB000000000000000000006F,
-				AB0000000000000000000070,
-				AB0000000000000000000071,
-				AB0000000000000000000072,
-				AB0000000000000000000073,
-				AB0000000000000000000074,
-				AB0000000000000000000075,
-				AB0000000000000000000076,
+				AB000000000000000000006B /* TestSupport.swift in Sources */,
+				AB000000000000000000006C /* KeychainServiceTests.swift in Sources */,
+				AB000000000000000000006D /* APIClientTests.swift in Sources */,
+				AB000000000000000000006E /* AppConfigurationTests.swift in Sources */,
+				AB000000000000000000006F /* CodeupServiceTests.swift in Sources */,
+				AB0000000000000000000070 /* RepositoryMatcherTests.swift in Sources */,
+				AB0000000000000000000071 /* FlowServiceTests.swift in Sources */,
+				AB0000000000000000000072 /* BuildServiceTests.swift in Sources */,
+				AB0000000000000000000073 /* BuildViewModelTests.swift in Sources */,
+				AB0000000000000000000074 /* BuildResultViewModelTests.swift in Sources */,
+				AB0000000000000000000075 /* BuildRunIdentityTests.swift in Sources */,
+				AB0000000000000000000076 /* BuildLogParserTests.swift in Sources */,
 			);
-			isa = PBXSourcesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AB0000000000000000000088 = {
+		AB0000000000000000000088 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AB0000000000000000000087;
-			targetProxy = AB0000000000000000000086;
+			target = AB0000000000000000000087 /* AndroidBuildClient */;
+			targetProxy = AB0000000000000000000086 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AB000000000000000000007D /* Debug */ = {
+			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -964,7 +536,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -977,10 +549,10 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 6.0;
 			};
-			isa = XCBuildConfiguration;
 			name = Debug;
 		};
 		AB000000000000000000007E /* Release */ = {
+			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1011,7 +583,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -1022,15 +594,17 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 6.0;
 			};
-			isa = XCBuildConfiguration;
 			name = Release;
 		};
 		AB0000000000000000000080 /* Debug */ = {
+			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KGL4F76X9E;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1045,15 +619,17 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
-			isa = XCBuildConfiguration;
 			name = Debug;
 		};
 		AB0000000000000000000081 /* Release */ = {
+			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KGL4F76X9E;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1068,10 +644,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
-			isa = XCBuildConfiguration;
 			name = Release;
 		};
 		AB0000000000000000000083 /* Debug */ = {
+			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "-";
@@ -1084,10 +660,10 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AndroidBuildClient.app/Contents/MacOS/AndroidBuildClient";
 			};
-			isa = XCBuildConfiguration;
 			name = Debug;
 		};
 		AB0000000000000000000084 /* Release */ = {
+			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "-";
@@ -1100,38 +676,37 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AndroidBuildClient.app/Contents/MacOS/AndroidBuildClient";
 			};
-			isa = XCBuildConfiguration;
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AB000000000000000000007F /* Build configuration list */ = {
+		AB000000000000000000007F /* Build configuration list for PBXProject "AndroidBuildClient" */ = {
+			isa = XCConfigurationList;
 			buildConfigurations = (
-				AB000000000000000000007D,
-				AB000000000000000000007E,
+				AB000000000000000000007D /* Debug */,
+				AB000000000000000000007E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-			isa = XCConfigurationList;
 		};
-		AB0000000000000000000082 /* Build configuration list */ = {
+		AB0000000000000000000082 /* Build configuration list for PBXNativeTarget "AndroidBuildClient" */ = {
+			isa = XCConfigurationList;
 			buildConfigurations = (
-				AB0000000000000000000080,
-				AB0000000000000000000081,
+				AB0000000000000000000080 /* Debug */,
+				AB0000000000000000000081 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-			isa = XCConfigurationList;
 		};
-		AB0000000000000000000085 /* Build configuration list */ = {
+		AB0000000000000000000085 /* Build configuration list for PBXNativeTarget "AndroidBuildClientTests" */ = {
+			isa = XCConfigurationList;
 			buildConfigurations = (
-				AB0000000000000000000083,
-				AB0000000000000000000084,
+				AB0000000000000000000083 /* Debug */,
+				AB0000000000000000000084 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-			isa = XCConfigurationList;
 		};
 /* End XCConfigurationList section */
 	};
